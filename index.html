@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<div class="container text-center dveri">
+	<img src="door.png" class="w-25 dver1">
+	<img src="door2 .png" class="w-25">
+	<img src="door3 .png" class="w-25">
+</div>
+<div class="gp" style="background-image: url(bg.jpg); background-size: 100%100%; display: none; height: 1000px; color: white;">
+	<h1>Помоги Гарри найти его метлу, плащь и палочку! Надо заработать 3 очка!</h1>
+	<h1 class="ochki">0</h1>
+	<button class="btn_gp btn btn-success">выйти из игры</button>
+	<img src="gun.png" style="width: 60px; position: absolute; margin-left: 980px; margin-top: 670px; ">
+	<img src="mantiya.png" class="mantiya" style="width: 60px; position: absolute; margin-left: 780px; margin-top: 470px; ">
+	<img src="metla.png" class="metla" style="width: 60px; position: absolute; margin-left: 1300px; margin-top: 850px; ">
+	<img src="palochka.png" class="palochka" style="width: 60px; position: absolute; margin-left: 685px; margin-top: 570px;">
+	<img src="ring.png" style="width: 60px; position: absolute; margin-left: 780px; margin-top: 770px; ">
+</div>
+
+<script type="text/javascript">
+
+let ochki = 0;
+
+
+//двери
+document.querySelector('.dver1').onclick = function(){
+		alert('КАК ТЫ ДОГОДАЛСЯ? Хогвартц')
+		document.querySelector('.gp').style.display='block';
+		document.querySelector('.dveri').style.display='none';
+	}
+document.querySelector('.metla').onclick = function(){
+		ochki = ochki+1;
+		document.querySelector('.ochki').innerHTML = ochki;
+		document.querySelector('.metla').style.display='none';
+	}
+document.querySelector('.mantiya').onclick = function(){
+		ochki = ochki+1;
+		document.querySelector('.ochki').innerHTML = ochki;
+		document.querySelector('.mantiya').style.display='none';
+	}
+document.querySelector('.palochka').onclick = function(){
+		ochki = ochki+1;
+		document.querySelector('.ochki').innerHTML = ochki;
+		document.querySelector('.palochka').style.display='none';
+	}
+
+document.querySelector('.btn_gp').onclick = function(){
+		document.querySelector('.dveri').style.display='block';
+		document.querySelector('.gp').style.display='none';
+	}
+
+</script>
+</body>
+</html>
